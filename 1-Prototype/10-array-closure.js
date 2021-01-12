@@ -35,9 +35,8 @@ const query = person => (
 console.dir(data);
 
 data.forEach(person => {
-  Object.setPrototypeOf(person, Person.prototype)
-  // person.prototype = new Person()
-  // person.prototype.constructor = person
+  Reflect.setPrototypeOf(person, Person.prototype)
+  // Object.setPrototypeOf(person, Person.prototype)
   // person.__proto__ = Person.prototype
 })
 
